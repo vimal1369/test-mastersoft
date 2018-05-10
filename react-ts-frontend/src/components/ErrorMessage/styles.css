@@ -1,0 +1,8 @@
+@import '../../main.css';
+.error {
+  background-color: var(--main-orange);
+  border-radius: var(--app-radius);
+  color: var(--main-white);
+  margin: (var(--vspace) / 2) 0;
+  padding: (var(--vspace) * 2) var(--hspace);
+}

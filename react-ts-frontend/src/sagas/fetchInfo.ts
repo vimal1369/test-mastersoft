@@ -32,7 +32,7 @@ export function* fetchAllUsersInfo(action: any): {} {
         // console.log(action.data);
         yield put(fetchAllUsersInfoProgress());
         const result = yield call( API.getUsersInfo);
-        yield put(fetchAllUsersInfoSuccessful(result.data));
+        yield put(fetchAllUsersInfoSuccessful(result.data.users));
     } catch (err) {
         // tslint:disable-next-line:no-console
         console.error(err);

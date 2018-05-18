@@ -14,6 +14,13 @@ mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://127.0.0.1/test');
 app.use(cors());
 app.options('*', cors());
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header('Access-Control-Allow-Methods', 'DELETE, PUT, GET, POST');
+  res.header("Access-Control-Allow-Headers", "Content-Type");
+  next();
+});
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');

@@ -6,11 +6,10 @@ const AppAPI = {
 
   init() {
     return axios.create({
-      headers: {
-        common: {
-          Authorization: localStorage.getItem('accessToken') || ''
-        }
-      }
+      headers: { 
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+    }
     });
   },
 
